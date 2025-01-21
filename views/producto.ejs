@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Productos</h1>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Precio</th>
+            <th>Colores</th>
+        </tr>
+        <% for (cliente of datos) { %>
+            <tr>
+                <td>
+                    <%= cliente.nombre %>
+                </td>
+                <td>
+                    <%= cliente.precio %>
+                </td>
+                <td>
+                    <select name="cars" id="cars">
+                        <% for (color of cliente.colores) { %>
+                            <option>
+                                <%= color %>
+                            </option>
+                        <% } %>
+                    </select>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+
+</html>
